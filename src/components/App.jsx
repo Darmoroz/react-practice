@@ -24,14 +24,8 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index element={<Navigate to="homepage" />} />
+        <Route index element={<Navigate to="Users" />} />
         <Route path="homepage" element={<HomePage />} />
-        <Route path="forms" element={<Forms />}>
-          <Route index element={<Navigate to="lg1" />} />
-          <Route path="lg1" element={<LoginForm />} />
-          <Route path="lg2" element={<LoginFormSecondary />} />
-          <Route path="lg3" element={<LoginFormFormik />} />
-        </Route>
         <Route path="useState" element={<UseState />}>
           <Route index element={<Navigate to="banner" />} />
           <Route path="banner" element={<Banner />} />
@@ -49,6 +43,12 @@ const App = () => {
         </Route>
         <Route path="Reader" element={<Reader />} />
         <Route path="Users" element={<Users />} />
+        <Route path="forms" element={<Forms />}>
+          <Route index element={<Navigate to="lg1" />} />
+          <Route path="lg1" element={<LoginForm />} />
+          <Route path="lg2" element={<LoginFormSecondary />} />
+          <Route path="lg3" element={<LoginFormFormik />} />
+        </Route>
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
