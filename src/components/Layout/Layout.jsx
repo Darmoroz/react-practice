@@ -10,9 +10,6 @@ const Layout = ({ children }) => {
             <NavLink to="homepage">Home Page</NavLink>
           </li>
           <li>
-            <NavLink to="forms">Forms</NavLink>
-          </li>
-          <li>
             <NavLink to="useState">useState</NavLink>
           </li>
           <li>
@@ -23,6 +20,9 @@ const Layout = ({ children }) => {
           </li>
           <li>
             <NavLink to="Users">Users</NavLink>
+          </li>
+          <li>
+            <NavLink to="forms">Forms</NavLink>
           </li>
         </ul>
       </nav>

@@ -49,7 +49,7 @@ const App = () => {
           <Route path="lg2" element={<LoginFormSecondary />} />
           <Route path="lg3" element={<LoginFormFormik />} />
         </Route>
-        <Route path="*" element={<NotFound />} />
+        {/* <Route path="*" element={<NotFound />} /> */}
       </Route>
     </Routes>
   );
