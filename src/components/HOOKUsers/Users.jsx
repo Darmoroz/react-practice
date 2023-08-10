@@ -5,10 +5,11 @@ import UsersSearch from './components/UsersSearch/UsersSearch';
 import Modal from 'components/HOOKModal/Modal';
 import AddNewUserForm from './components/AddNewUserForm/AddNewUserForm';
 import useToggle from 'hooks/useToggle';
+import usersJSON from 'assets/users.json';
 
-const Users = ({ users }) => {
+const Users = () => {
   const [search, setSearch] = useState('');
-  const [usersState, setUsersState] = useState(users);
+  const [usersState, setUsersState] = useState(usersJSON);
   const [on, toggle] = useToggle(false);
 
   const newUsers = usersState.filter(user =>
@@ -21,7 +22,7 @@ const Users = ({ users }) => {
 
   const handleDelete = id => {
     setUsersState(usersState => {
-      usersState.filter(user => user.id !== id);
+      return usersState.filter(user => user.id !== id);
     });
   };
 

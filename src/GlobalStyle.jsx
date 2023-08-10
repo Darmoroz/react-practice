@@ -58,8 +58,50 @@ h3 {
 
 .formik{
   display: grid;
- grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 1em;
-   grid-row-gap: 1em;
-  
+  grid-row-gap: 1em;
+}
+
+a{
+  color:#000000;
+  text-decoration: none;
+}
+
+nav {
+  font-size:24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  ul {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.active{
+  color: #4b56fa;
+}
+
+main{
+  font-size:20px;
+  ul{
+   flex-direction: row;
+    margin-bottom: 24px;
+    display:flex;
+    justify-content: space-evenly;
+    li{
+      :hover{
+        a{
+          color: #31aa88;
+
+        }
+      }
+    }
+  }
+  ul.http{
+    flex-direction:column ;
+  }
+}
+.mb-5{
+  display: flex;
+  flex-direction: column;
 }`;

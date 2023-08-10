@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styles from './LoginForm.module.css';
 import { useLocalStorage } from 'hooks/useLocalStorage';
 
-export const LoginForm = () => {
+const LoginForm = () => {
   const [email, setEmail] = useLocalStorage('email1', '');
   const [password, setPassword] = useState('');
 
@@ -42,3 +42,5 @@ export const LoginForm = () => {
     </form>
   );
 };
+
+export default LoginForm;

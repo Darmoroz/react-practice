@@ -4,10 +4,11 @@ import PropTypes from 'prop-types';
 import { Controls } from './components/Controls/Controls';
 import { Progress } from './components/Progress/Progress';
 import { Publication } from './components/Publication/Publication';
+import items from 'assets/publications.json';
 
 const LS_KEY = 'reader_item_idx';
 
-const Reader = ({ items }) => {
+const Reader = () => {
   const [activeIdx, setActiveIdx] = useState(() => {
     return Number(window.localStorage.getItem(LS_KEY)) ?? 0;
   });
@@ -45,7 +46,7 @@ Reader.propTypes = {
       title: PropTypes.string.isRequired,
       text: PropTypes.string.isRequired,
     }).isRequired
-  ).isRequired,
+  ),
 };
 // export class Reader extends Component {
 //   static propTypes = {

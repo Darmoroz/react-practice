@@ -1,9 +1,11 @@
 import { useState } from 'react';
+import { colorPickerOptions } from 'constants/colorPickerOptions';
+
 import styles from './ColorPicker.module.css';
 
-export const ColorPicker = ({ options }) => {
+export const ColorPicker = () => {
   const [activeOptionIndex, setActiveOptionIndex] = useState(0);
-  const { label } = options[activeOptionIndex];
+  const { label } = colorPickerOptions[activeOptionIndex];
 
   const makeOptionClassName = index => {
     return index === activeOptionIndex ? styles.activeOption : styles.option;
@@ -14,7 +16,7 @@ export const ColorPicker = ({ options }) => {
       <h2 className={styles.title}>Color Picker</h2>
       <p>Selected color: {label}</p>
       <div>
-        {options.map(({ label, color }, index) => (
+        {colorPickerOptions.map(({ label, color }, index) => (
           <button
             key={label}
             aria-label={label}

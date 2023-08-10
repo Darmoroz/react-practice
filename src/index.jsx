@@ -6,15 +6,15 @@ import { ThemeProvider } from 'styled-components';
 import { theme } from 'theme';
 import { GlobalStyle } from 'GlobalStyle';
 
-import { App } from 'components/App';
+import App from 'components/App';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <BrowserRouter>
+    <BrowserRouter>
+      <ThemeProvider theme={theme}>
         <GlobalStyle />
         <App />
-      </BrowserRouter>
-    </ThemeProvider>
+      </ThemeProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );

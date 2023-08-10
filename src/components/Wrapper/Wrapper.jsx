@@ -4,7 +4,7 @@ const Wrapper = ({ className, children }) => {
   return <div className={className}>{children}</div>;
 };
 
-export const WrapperStyled = styled(Wrapper)`
+export const Container = styled(Wrapper)`
   margin-left: auto;
   margin-right: auto;
   padding: 0 1rem;
